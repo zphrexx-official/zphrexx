@@ -126,5 +126,60 @@ main {
         font-size: 20px;
 
     }
+/* ===== Links ===== */
 
+.links {
+
+    margin-top:40px;
+
+    display:flex;
+
+    gap:20px;
+
+}
+
+
+.links a {
+
+    padding:12px 28px;
+
+    background:#111;
+
+    border:1px solid #39ff14;
+
+    border-radius:30px;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    transition:.25s;
+
+}
+
+
+.links a:hover {
+
+    background:#39ff14;
+
+    color:black;
+
+    box-shadow:0 0 25px #39ff14;
+
+    transform:translateY(-3px);
+
+}
+
+
+@media(max-width:600px){
+
+    .links{
+
+        flex-direction:column;
+
+    }
+
+}
 }
