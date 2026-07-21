@@ -1,4 +1,6 @@
-/* ===== Reset ===== */
+/* ===========================
+   Reset
+=========================== */
 
 * {
     margin: 0;
@@ -7,7 +9,9 @@
 }
 
 
-/* ===== Main ===== */
+/* ===========================
+   Body
+=========================== */
 
 body {
 
@@ -15,16 +19,16 @@ body {
 
     background: #050505;
 
-    color: white;
+    color: #ffffff;
 
     font-family: "Segoe UI", Arial, sans-serif;
-
-    overflow: hidden;
 
 }
 
 
-/* ===== Center ===== */
+/* ===========================
+   Main
+=========================== */
 
 main {
 
@@ -38,10 +42,14 @@ main {
 
     align-items: center;
 
+    padding: 20px;
+
 }
 
 
-/* ===== Avatar ===== */
+/* ===========================
+   Avatar
+=========================== */
 
 .avatar {
 
@@ -56,19 +64,19 @@ main {
     border: 3px solid #39ff14;
 
     box-shadow:
-
-        0 0 15px rgba(57,255,20,0.7),
-
-        0 0 40px rgba(57,255,20,0.25);
+        0 0 18px rgba(57,255,20,.75),
+        0 0 45px rgba(57,255,20,.20);
 
 }
 
 
-/* ===== Nickname ===== */
+/* ===========================
+   Nickname
+=========================== */
 
 .nickname {
 
-    margin-top: 25px;
+    margin-top: 22px;
 
     color: #39ff14;
 
@@ -76,102 +84,51 @@ main {
 
     font-weight: 700;
 
-    letter-spacing: 1px;
+    letter-spacing: .8px;
 
 }
 
 
-/* ===== Future content area ===== */
-
-.content {
-
-    margin-top: 50px;
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-}
-
-
-/* ===== Smooth details ===== */
-
-::selection {
-
-    background: #39ff14;
-
-    color: black;
-
-}
-
-
-/* ===== Mobile ===== */
-
-@media (max-width: 600px) {
-
-
-    .avatar {
-
-        width: 140px;
-
-        height: 140px;
-
-    }
-
-
-    .nickname {
-
-        font-size: 20px;
-
-    }
-/* ===== Links ===== */
+/* ===========================
+   Buttons
+=========================== */
 
 .links {
 
-    margin-top: 30px;
+    margin-top: 32px;
 
     display: flex;
 
-    gap: 16px;
+    gap: 14px;
 
 }
 
 
 .links a {
 
+    width: 130px;
+
+    height: 42px;
+
     display: flex;
 
     justify-content: center;
 
     align-items: center;
 
-    width: 125px;
-
-    height: 42px;
-
-    background: #0a0a0a;
+    text-decoration: none;
 
     color: #39ff14;
 
-    text-decoration: none;
+    background: #101010;
 
     border: 2px solid #39ff14;
 
     border-radius: 10px;
 
-    font-size: 15px;
-
     font-weight: 600;
 
-    cursor: pointer;
-
-    transition:
-        background .2s,
-        color .2s,
-        box-shadow .2s,
-        transform .15s;
+    transition: .2s ease;
 
 }
 
@@ -182,7 +139,7 @@ main {
 
     color: #050505;
 
-    box-shadow: 0 0 16px rgba(57,255,20,.55);
+    box-shadow: 0 0 18px rgba(57,255,20,.5);
 
     transform: translateY(-2px);
 
@@ -210,16 +167,40 @@ main {
 }
 
 
-@media (max-width:600px) {
+/* ===========================
+   Mobile
+=========================== */
+
+@media (max-width: 600px) {
+
+    .avatar {
+
+        width: 145px;
+
+        height: 145px;
+
+    }
+
+    .nickname {
+
+        font-size: 20px;
+
+    }
 
     .links {
 
         flex-direction: column;
 
+        width: 100%;
+
         align-items: center;
 
     }
 
-}
+    .links a {
+
+        width: 170px;
+
+    }
 
 }
