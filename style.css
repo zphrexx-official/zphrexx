@@ -1,228 +1,130 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+/* ===== Reset ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 
-body{
+/* ===== Main ===== */
 
-    background:#050505;
+body {
 
-    color:white;
+    min-height: 100vh;
 
-    min-height:100vh;
+    background: #050505;
 
-    font-family:Arial, sans-serif;
+    color: white;
 
-    overflow:hidden;
+    font-family: "Segoe UI", Arial, sans-serif;
 
-}
-
-
-
-#background{
-
-    position:fixed;
-
-    inset:0;
-
-    overflow:hidden;
-
-    z-index:-1;
+    overflow: hidden;
 
 }
 
 
-#code{
+/* ===== Center ===== */
 
-    position:absolute;
+main {
 
-    top:0;
+    min-height: 100vh;
 
-    left:0;
+    display: flex;
 
-    width:100%;
+    flex-direction: column;
 
-    color:#0b5c18;
+    justify-content: center;
 
-    opacity:0.35;
-
-    font-family:"JetBrains Mono", monospace;
-
-    font-size:18px;
-
-    line-height:32px;
-
-    white-space:pre;
-
-    animation:scrollCode 80s linear infinite;
+    align-items: center;
 
 }
 
 
+/* ===== Avatar ===== */
 
-@keyframes scrollCode{
+.avatar {
 
-    from{
+    width: 180px;
 
-        transform:translateY(0);
+    height: 180px;
 
-    }
+    object-fit: cover;
 
-    to{
+    border-radius: 50%;
 
-        transform:translateY(-50%);
-
-    }
-
-}
-
-
-
-main{
-
-    min-height:100vh;
-
-    display:flex;
-
-    flex-direction:column;
-
-    align-items:center;
-
-    justify-content:center;
-
-}
-
-
-
-.avatar{
-
-    width:160px;
-
-    height:160px;
-
-    border-radius:50%;
+    border: 3px solid #39ff14;
 
     box-shadow:
-    0 0 25px #39ff14;
+
+        0 0 15px rgba(57,255,20,0.7),
+
+        0 0 40px rgba(57,255,20,0.25);
 
 }
 
 
+/* ===== Nickname ===== */
 
-.nickname{
+.nickname {
 
-    margin-top:18px;
+    margin-top: 25px;
 
-    color:#39ff14;
+    color: #39ff14;
 
-    font-size:22px;
+    font-size: 24px;
 
-    font-weight:bold;
+    font-weight: 700;
 
-}
-
-
-
-.latest{
-
-    margin-top:55px;
-
-    text-align:center;
+    letter-spacing: 1px;
 
 }
 
 
+/* ===== Future content area ===== */
 
-.latest h1{
+.content {
 
-    font-size:38px;
+    margin-top: 50px;
 
-    margin-bottom:30px;
+    display: flex;
 
-}
+    justify-content: center;
 
-
-
-.short-card{
-
-    width:420px;
-
-    max-width:90vw;
-
-    background:rgba(15,15,15,.85);
-
-    border:1px solid #39ff14;
-
-    border-radius:20px;
-
-    overflow:hidden;
+    align-items: center;
 
 }
 
 
+/* ===== Smooth details ===== */
 
-.short-card img{
+::selection {
 
-    width:100%;
+    background: #39ff14;
 
-    display:block;
-
-}
-
-
-
-.short-card h2{
-
-    padding:20px;
+    color: black;
 
 }
 
 
+/* ===== Mobile ===== */
 
-.short-card a{
-
-    display:inline-block;
-
-    margin-bottom:20px;
-
-    padding:12px 30px;
-
-    border-radius:30px;
-
-    background:#39ff14;
-
-    color:black;
-
-    text-decoration:none;
-
-    font-weight:bold;
-
-}
+@media (max-width: 600px) {
 
 
+    .avatar {
 
-.short-card a:hover{
+        width: 140px;
 
-    box-shadow:0 0 20px #39ff14;
+        height: 140px;
 
-    .code-line{
+    }
 
-    position:absolute;
 
-    color:#0b5c18;
+    .nickname {
 
-    opacity:0.45;
+        font-size: 20px;
 
-    font-family:"JetBrains Mono", monospace;
-
-    font-size:18px;
-
-    white-space:nowrap;
-
-    user-select:none;
-
-}
+    }
 
 }
