@@ -27,9 +27,54 @@ body{
 
     inset:0;
 
+    overflow:hidden;
+
     z-index:-1;
 
-    overflow:hidden;
+}
+
+
+#code{
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    color:#0b5c18;
+
+    opacity:0.35;
+
+    font-family:"JetBrains Mono", monospace;
+
+    font-size:18px;
+
+    line-height:32px;
+
+    white-space:pre;
+
+    animation:scrollCode 80s linear infinite;
+
+}
+
+
+
+@keyframes scrollCode{
+
+    from{
+
+        transform:translateY(0);
+
+    }
+
+    to{
+
+        transform:translateY(-50%);
+
+    }
 
 }
 
