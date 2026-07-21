@@ -1,1 +1,230 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050505;
+    color:white;
+    font-family:Arial,Helvetica,sans-serif;
+    overflow-x:hidden;
+}
+
+/* ===== Background ===== */
+
+#background{
+    position:fixed;
+    inset:0;
+    z-index:-1;
+    overflow:hidden;
+}
+
+/* ===== Header ===== */
+
+header{
+    width:100%;
+    padding:25px 60px;
+}
+
+.logo{
+    color:#39ff14;
+    font-size:22px;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+/* ===== Main ===== */
+
+main{
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px;
+
+}
+
+/* ===== Avatar ===== */
+
+.avatar{
+
+    width:170px;
+
+    height:170px;
+
+    border-radius:50%;
+
+    margin-bottom:40px;
+
+    box-shadow:
+    0 0 20px #39ff14,
+    0 0 45px #39ff14;
+
+}
+
+/* ===== Card ===== */
+
+.short-card{
+
+    width:min(650px,90vw);
+
+    background:#111;
+
+    border:1px solid #39ff14;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 0 15px rgba(57,255,20,.25);
+
+}
+
+.short-card img{
+
+    width:100%;
+
+    display:block;
+
+}
+
+.short-card h2{
+
+    padding:20px;
+
+    font-size:24px;
+
+}
+
+.short-card a{
+
+    display:inline-block;
+
+    margin:0 20px 20px;
+
+    padding:12px 28px;
+
+    background:#39ff14;
+
+    color:black;
+
+    text-decoration:none;
+
+    border-radius:999px;
+
+    font-weight:bold;
+
+    transition:.25s;
+
+}
+
+.short-card a:hover{
+
+    transform:scale(1.05);
+
+    box-shadow:
+    0 0 18px #39ff14;
+
+}
+
+/* ===== Stats ===== */
+
+.stats{
+
+    margin-top:60px;
+
+    display:flex;
+
+    gap:25px;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+}
+
+.stat{
+
+    width:180px;
+
+    background:#111;
+
+    border:1px solid #222;
+
+    border-radius:16px;
+
+    padding:25px;
+
+    text-align:center;
+
+}
+
+.stat span{
+
+    display:block;
+
+    color:#39ff14;
+
+    font-size:34px;
+
+    font-weight:bold;
+
+}
+
+.stat p{
+
+    margin-top:10px;
+
+    color:#999;
+
+}
+
+/* ===== Responsive ===== */
+
+@media(max-width:700px){
+
+header{
+
+padding:20px;
+
+}
+
+.logo{
+
+font-size:18px;
+
+}
+
+.avatar{
+
+width:130px;
+height:130px;
+
+}
+
+.short-card h2{
+
+font-size:20px;
+
+}
+
+.stat{
+
+width:150px;
+
+}
+
+}
