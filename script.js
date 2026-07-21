@@ -1,101 +1,48 @@
-const background = document.getElementById("background");
+const code = document.getElementById("code");
 
 
-const code = [
+const text = `
+import requests
 
-"import random",
-"import requests",
-"",
-"channel = '@zphrexx.official'",
-"creator = 'Zphrexx'",
-"",
-"function loadShorts() {",
-"    getLatestVideo();",
-"}",
-"",
-"subscribers = update()",
-"views = calculate()",
-"",
-"if online:",
-"    upload()",
-"",
-"while True:",
-"    create_content()",
-"",
-"status = ONLINE",
-"system.ready = true",
-"",
-"render_interface()",
-"",
-"// Brawl Stars Creator",
-"// Latest Shorts",
-"// YouTube API",
-"",
-"loading assets...",
-"connecting...",
-"complete."
-];
+creator = "Zphrexx"
 
+channel = "@zphrexx.official"
 
+status = "ONLINE"
 
-function createCodeLine(){
+load_system()
 
-    const line = document.createElement("div");
+connect_youtube()
 
-    line.className = "code-line";
+latest_shorts()
 
-    line.textContent =
-    code[Math.floor(Math.random()*code.length)];
+brawl_stars()
+
+subscribers.update()
+
+views.calculate()
+
+while True:
+
+    create_content()
+
+    upload()
+
+    improve()
+
+function render():
+
+    return website
+
+// ZPHREXX
+// BRAWL STARS
+// YOUTUBE CREATOR
+
+system.ready = true
+
+`;
 
 
-    line.style.left =
-    Math.random()*100 + "vw";
+// делаем большой лист кода
 
-
-    line.style.top =
-    Math.random()*100 + "vh";
-
-
-    line.style.transform =
-    `rotate(${Math.random()*4-2}deg)`;
-
-
-    background.appendChild(line);
-
-}
-
-
-
-for(let i = 0; i < 80; i++){
-
-    createCodeLine();
-
-}
-
-
-
-let offset = 0;
-
-
-function moveCode(){
-
-    offset -= 0.15;
-
-
-    background.style.transform =
-    `translateY(${offset}px)`;
-
-
-    if(offset < -200){
-
-        offset = 0;
-
-    }
-
-
-    requestAnimationFrame(moveCode);
-
-}
-
-
-moveCode();
+code.innerHTML = text.repeat(8);
