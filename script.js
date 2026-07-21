@@ -1,92 +1,101 @@
 const background = document.getElementById("background");
 
-const codeLines = [
+
+const code = [
 
 "import random",
-"from brawl import *",
-"player = 'Zphrexx'",
+"import requests",
+"",
 "channel = '@zphrexx.official'",
-"Loading...",
-"Connecting...",
-"Generating...",
-"System Ready",
-"while True:",
-"print('BRAWL STARS')",
-"def shorts():",
-"return latest_short",
-"subscribers += 1",
-"views += 1000",
-"render()",
+"creator = 'Zphrexx'",
+"",
+"function loadShorts() {",
+"    getLatestVideo();",
+"}",
+"",
+"subscribers = update()",
+"views = calculate()",
+"",
 "if online:",
-"watch()",
-"upload()"
-
+"    upload()",
+"",
+"while True:",
+"    create_content()",
+"",
+"status = ONLINE",
+"system.ready = true",
+"",
+"render_interface()",
+"",
+"// Brawl Stars Creator",
+"// Latest Shorts",
+"// YouTube API",
+"",
+"loading assets...",
+"connecting...",
+"complete."
 ];
 
-function createLine(){
+
+
+function createCodeLine(){
 
     const line = document.createElement("div");
 
-    line.innerText =
-    codeLines[
-        Math.floor(Math.random()*codeLines.length)
-    ];
+    line.className = "code-line";
 
-    line.style.position = "absolute";
+    line.textContent =
+    code[Math.floor(Math.random()*code.length)];
+
 
     line.style.left =
     Math.random()*100 + "vw";
 
-    line.style.top = "110vh";
 
-    line.style.color = "#39ff14";
+    line.style.top =
+    Math.random()*100 + "vh";
 
-    line.style.opacity = "0.18";
 
-    line.style.fontSize =
-    (16 + Math.random()*18) + "px";
+    line.style.transform =
+    `rotate(${Math.random()*4-2}deg)`;
 
-    line.style.fontFamily =
-    "monospace";
-
-    line.style.whiteSpace = "nowrap";
-
-    line.style.pointerEvents = "none";
 
     background.appendChild(line);
 
-    let y = window.innerHeight + 50;
+}
 
-    const speed =
-    0.3 + Math.random()*0.8;
 
-    function animate(){
 
-        y -= speed;
+for(let i = 0; i < 80; i++){
 
-        line.style.transform =
-        `translateY(${y-window.innerHeight}px)`;
+    createCodeLine();
 
-        if(y < -150){
+}
 
-            line.remove();
 
-            return;
 
-        }
+let offset = 0;
 
-        requestAnimationFrame(animate);
+
+function moveCode(){
+
+    offset -= 0.15;
+
+
+    background.style.transform =
+    `translateY(${offset}px)`;
+
+
+    if(offset < -200){
+
+        offset = 0;
 
     }
 
-    animate();
+
+    requestAnimationFrame(moveCode);
 
 }
 
-setInterval(createLine,250);
 
-for(let i=0;i<30;i++){
-
-    setTimeout(createLine,i*120);
-
-}
+moveCode();
