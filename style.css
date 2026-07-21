@@ -4,41 +4,36 @@
     box-sizing:border-box;
 }
 
-html{
-    scroll-behavior:smooth;
-}
 
 body{
+
     background:#050505;
+
     color:white;
-    font-family:Arial,Helvetica,sans-serif;
-    overflow-x:hidden;
+
+    min-height:100vh;
+
+    font-family:Arial, sans-serif;
+
+    overflow:hidden;
+
 }
 
-/* ===== Background ===== */
+
 
 #background{
+
     position:fixed;
+
     inset:0;
+
     z-index:-1;
+
     overflow:hidden;
+
 }
 
-/* ===== Header ===== */
 
-header{
-    width:100%;
-    padding:25px 60px;
-}
-
-.logo{
-    color:#39ff14;
-    font-size:22px;
-    font-weight:bold;
-    letter-spacing:1px;
-}
-
-/* ===== Main ===== */
 
 main{
 
@@ -48,50 +43,80 @@ main{
 
     flex-direction:column;
 
-    justify-content:center;
-
     align-items:center;
 
-    padding:40px;
+    justify-content:center;
 
 }
 
-/* ===== Avatar ===== */
+
 
 .avatar{
 
-    width:170px;
+    width:160px;
 
-    height:170px;
+    height:160px;
 
     border-radius:50%;
 
-    margin-bottom:40px;
-
     box-shadow:
-    0 0 20px #39ff14,
-    0 0 45px #39ff14;
+    0 0 25px #39ff14;
 
 }
 
-/* ===== Card ===== */
+
+
+.nickname{
+
+    margin-top:18px;
+
+    color:#39ff14;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+}
+
+
+
+.latest{
+
+    margin-top:55px;
+
+    text-align:center;
+
+}
+
+
+
+.latest h1{
+
+    font-size:38px;
+
+    margin-bottom:30px;
+
+}
+
+
 
 .short-card{
 
-    width:min(650px,90vw);
+    width:420px;
 
-    background:#111;
+    max-width:90vw;
+
+    background:rgba(15,15,15,.85);
 
     border:1px solid #39ff14;
 
-    border-radius:18px;
+    border-radius:20px;
 
     overflow:hidden;
 
-    box-shadow:
-    0 0 15px rgba(57,255,20,.25);
-
 }
+
+
 
 .short-card img{
 
@@ -101,21 +126,25 @@ main{
 
 }
 
+
+
 .short-card h2{
 
     padding:20px;
 
-    font-size:24px;
-
 }
+
+
 
 .short-card a{
 
     display:inline-block;
 
-    margin:0 20px 20px;
+    margin-bottom:20px;
 
-    padding:12px 28px;
+    padding:12px 30px;
+
+    border-radius:30px;
 
     background:#39ff14;
 
@@ -123,108 +152,14 @@ main{
 
     text-decoration:none;
 
-    border-radius:999px;
-
     font-weight:bold;
 
-    transition:.25s;
-
 }
+
+
 
 .short-card a:hover{
 
-    transform:scale(1.05);
-
-    box-shadow:
-    0 0 18px #39ff14;
-
-}
-
-/* ===== Stats ===== */
-
-.stats{
-
-    margin-top:60px;
-
-    display:flex;
-
-    gap:25px;
-
-    flex-wrap:wrap;
-
-    justify-content:center;
-
-}
-
-.stat{
-
-    width:180px;
-
-    background:#111;
-
-    border:1px solid #222;
-
-    border-radius:16px;
-
-    padding:25px;
-
-    text-align:center;
-
-}
-
-.stat span{
-
-    display:block;
-
-    color:#39ff14;
-
-    font-size:34px;
-
-    font-weight:bold;
-
-}
-
-.stat p{
-
-    margin-top:10px;
-
-    color:#999;
-
-}
-
-/* ===== Responsive ===== */
-
-@media(max-width:700px){
-
-header{
-
-padding:20px;
-
-}
-
-.logo{
-
-font-size:18px;
-
-}
-
-.avatar{
-
-width:130px;
-height:130px;
-
-}
-
-.short-card h2{
-
-font-size:20px;
-
-}
-
-.stat{
-
-width:150px;
-
-}
+    box-shadow:0 0 20px #39ff14;
 
 }
