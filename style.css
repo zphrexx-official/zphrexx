@@ -128,24 +128,18 @@ main {
     }
 /* ===== Links ===== */
 
-/* ===== Links ===== */
-
 .links {
 
-    margin-top: 28px;
+    margin-top: 30px;
 
     display: flex;
 
-    gap: 14px;
+    gap: 16px;
 
 }
 
 
 .links a {
-
-    width: 135px;
-
-    height: 42px;
 
     display: flex;
 
@@ -153,21 +147,31 @@ main {
 
     align-items: center;
 
-    background: #0d0d0d;
+    width: 125px;
 
-    border: 1px solid #39ff14;
+    height: 42px;
 
-    border-radius: 12px;
+    background: #0a0a0a;
 
     color: #39ff14;
 
     text-decoration: none;
 
+    border: 2px solid #39ff14;
+
+    border-radius: 10px;
+
     font-size: 15px;
 
     font-weight: 600;
 
-    transition: .2s;
+    cursor: pointer;
+
+    transition:
+        background .2s,
+        color .2s,
+        box-shadow .2s,
+        transform .15s;
 
 }
 
@@ -178,7 +182,7 @@ main {
 
     color: #050505;
 
-    box-shadow: 0 0 18px rgba(57,255,20,.55);
+    box-shadow: 0 0 16px rgba(57,255,20,.55);
 
     transform: translateY(-2px);
 
@@ -187,7 +191,21 @@ main {
 
 .links a:active {
 
-    transform: scale(.96);
+    transform: translateY(0);
+
+}
+
+
+.links a:visited {
+
+    color: #39ff14;
+
+}
+
+
+.links a:hover:visited {
+
+    color: #050505;
 
 }
 
@@ -201,5 +219,7 @@ main {
         align-items: center;
 
     }
+
+}
 
 }
